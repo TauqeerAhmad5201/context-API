@@ -1,9 +1,17 @@
 import React from 'react'
-
+import { data_name } from '../App'
 export default function ChildC() {
   return (
     <div>
-      <p>Hello Learning</p>
+      <data_name.Consumer>
+        {
+            (name)=> {
+                return (
+                    <p>Hello {name}</p>
+                )
+            }
+        }
+      </data_name.Consumer>
     </div>
   )
 }
